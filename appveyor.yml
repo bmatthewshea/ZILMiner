@@ -47,10 +47,10 @@ build_script:
   - cmake --build build --config Release --target package
   - ps: |
       . build/ethminer/buildinfo.ps1
-      mv build/zilminer.zip build/$env:project_name-$env:project_version-cuda$env:CUDA_VER-$env:system_name-$env:system_processor.zip
+      mv C:/projects/zilminer/build/zilminer.zip C:/projects/zilminer/build/$env:project_name-$env:project_version-cuda$env:CUDA_VER-$env:system_name-$env:system_processor.zip
 
 artifacts:
-  - path: build/zilminer*.zip
+  - path: C:/projects/zilminer/build/*.zip
     name: zilminer
 
 deploy:
@@ -64,6 +64,6 @@ deploy:
   draft: false
   artifact: zilminer
   auth_token:
-    secure: uDRcvbW+9GIyKlZ9guJfWOQ6jg0An6eULg6mEkYgdKn/GVNpYSKvO5oHxP0U8a+e
+    secure: Gxpg3MUS1GUIuletUd850Rn6hbKM7YV85EtxQq8ETtwFKXpiYVVpnDSRGJjCbTPU
   on:
     appveyor_repo_tag: true
