@@ -50,7 +50,7 @@ build_script:
       mv C:/projects/zilminer/build/zilminer.zip C:/projects/zilminer/build/$env:project_name-$env:project_version-cuda$env:CUDA_VER-$env:system_name-$env:system_processor.zip
 
 artifacts:
-  - path: C:/projects/zilminer/build/*.zip
+  - path: build/*.zip
     name: zilminer
 
 deploy:
